@@ -1,21 +1,21 @@
 /*mobile first Design 576px*/
 /* root & body format*/
 
-:root{
+:root {
     --main-bg-color: #0c0c0c;
     --modal-bg-color: #2e2a2a;
     --btn-color: #1057fa;
     --font-color: #fdfdfe;
 }
 
-body{
+body {
     background-color: var(--main-bg-color);
     color: var(--font-color);
     margin: 0 auto;
     max-width: 90%; /*vw = viewwidth ( Viewport Einheiten) 90% yerine 90vw de yazilabilir*/
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -26,13 +26,19 @@ body{
 h1 {
     text-align: center;
 }
-h1 img{
+
+h1 img {
     width: 90%;
+}
+
+h3 {
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 4rem);
 }
 
 /*navigation format*/
 
-nav ul{
+nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -41,7 +47,7 @@ nav ul{
 
 /*link styling*/
 
-li a, .modal a{
+li a, .modal a {
     color: var(--font-color);
     background-color: var(--btn-color);
     display: inline-block; /* inline elemente sizing*/
@@ -65,38 +71,58 @@ li a, .modal a{
     padding: 1rem 0;
 }
 
-.banner h2{
+.banner h2 {
     font-size: clamp(3rem, 4vw, 4rem);
-/*margin-bottom: 1em;  coders.bay ile Orientierung arasindaki boslukla oynar - (minus) degerde verilebilir.*/
+    /*margin-bottom: 1em;  coders.bay ile Orientierung arasindaki boslukla oynar - (minus) degerde verilebilir.*/
+
 
 }
-.banner p{
-font-size: clamp(1.5rem, 3vw, 2.5rem);
-line-height: 2em;
-margin-bottom: 2rem;
-font-weight: bold;
+
+.banner p {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    line-height: 2em;
+    margin-bottom: 2rem;
+    font-weight: bold;
 }
-.banner img{
+
+.banner img {
     max-width: 40%;
     margin-bottom: 2rem;
 }
 
 /*down arrow format*/
-.arrow{
+.arrow {
     text-align: center;
     font-size: clamp(8rem, 20vw, 12rem);
     margin: 1em 0;
 }
 
+/*orientierungen Seite*/
+.JavaOR {
+    text-align: center;
+
+}
+
+.JavaOR p {
+    text-align: -webkit-left;
+    font-size: 16px;
+
+}
+
+.JavaOR img {
+    min-width: 20%;
+}
+
+
 /*modal format*/
 
-h2{
+h2 {
     text-align: center;
     font-size: clamp(2rem, 5vw, 4rem);
     margin: 1em 0;
 }
 
-.modal{
+.modal, .JavaOR, .JavaOR1 {
     background-color: var(--modal-bg-color);
     padding: 2em 4em;
     border-radius: 10px;
@@ -104,11 +130,11 @@ h2{
     margin: 5rem 0;
 }
 
-.modal h3{
+.modal h3 {
     font-size: clamp(1.5rem, 3vw, 4rem);
 }
 
-.modal p{
+.modal p {
     text-align: justify;
     line-height: 2em;
     margin-top: 4em;
@@ -117,14 +143,14 @@ h2{
 
 }
 
-.modal a{
+.modal a {
     width: 60%;
     font-size: clamp(1rem, 3vw, 1.5rem);
     margin-top: 2em;
 }
 
 /* coontact form format */
-form{
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -132,11 +158,12 @@ form{
     border-radius: 10px;
     margin: 5rem 0;
 }
-form h3{
+
+form h3 {
     font-size: clamp(1.5rem, 3vw, 4rem);
 }
 
-input[type="text"], input[type="email"]{
+input[type="text"], input[type="email"], input[type="address"] {
     background-color: var(--modal-bg-color);
     border: 3px solid var(--btn-color);
     border-radius: 10px;
@@ -145,7 +172,8 @@ input[type="text"], input[type="email"]{
     font-size: 2em;
     width: 60vw;
 }
-input[type="submit"]{
+
+input[type="submit"] {
     background-color: var(--btn-color);
     border: none;
     color: var(--font-color);
@@ -158,7 +186,7 @@ input[type="submit"]{
 
 }
 
-label{
+label {
     font-size: clamp(1.5rem, 3vw, 2rem);
     font-weight: bold;
     margin-bottom: 1rem;
@@ -166,10 +194,9 @@ label{
 
 /*breakpoint for 1400px desktop view*/
 
-@media screen and (min-width: 1400px){
+@media screen and (min-width: 1400px) {
     /*header & nav format*/
-
-    header{
+    header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -177,55 +204,109 @@ label{
 
     }
 
-    h1 img{
+    h1 img {
         width: 200%;
         margin-left: 1em;
     }
 
-    ul{
+    ul {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
     }
-    ul li{
+
+    ul li {
         margin: 0 2rem;
     }
-    li a{
+
+    .text1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text2{
+        display: flex;
+        flex-direction: row;
+    }
+    dl dt {
+        font-size: 30px;
+        margin: 0 2rem;
+    }
+
+    dl, dt, .dd {
+        font-size: 30px;
+        margin: 0 2rem;
+    }
+
+    li a {
         padding: 1rem 2rem;
         width: 200px;
     }
 
+    .bew {
+        padding: 1rem 1rem;
+        width: 200px;
+    }
+
     /*banner format*/
-    .banner{
+    .banner {
         display: flex;
         justify-content: space-around;
     }
 
-    .banner img{
+    .banner img {
         width: 20%;
     }
 
-    .flex-cantainer{
+    .flex-cantainer {
         display: flex;
         flex-direction: row;
         gap: 10rem;
     }
 
-    .flex-modal{
+    .flex-modal {
         display: flex;
         flex-direction: row;
         gap: 2rem;
     }
 
-    .flex-footer{
+    .flex-footer {
         display: flex;
         justify-content: space-between;
 
     }
 
-    input[type="submit"]{
+    input[type="submit"] {
         width: 30%;
     }
-}
 
-]
+    .JavaOR {
+        /*margin: 50px;*/
+        display: flex;
+        align-items: center;
+    }
+
+    .JavaOR p {
+        font-size: 20px;
+        margin: 0 20px;
+    }
+
+    h4 {
+        text-align: -webkit-left;
+        font-size: 30px;
+
+
+    }
+
+    .JavaOR1 {
+        display: flex;
+        font-size: 20px;
+        margin: 0 20px;
+        flex-direction: row-reverse;
+    }
+
+    table {
+
+    }
+
+}
