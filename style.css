@@ -1,0 +1,231 @@
+/*mobile first Design 576px*/
+/* root & body format*/
+
+:root{
+    --main-bg-color: #0c0c0c;
+    --modal-bg-color: #2e2a2a;
+    --btn-color: #1057fa;
+    --font-color: #fdfdfe;
+}
+
+body{
+    background-color: var(--main-bg-color);
+    color: var(--font-color);
+    margin: 0 auto;
+    max-width: 90%; /*vw = viewwidth ( Viewport Einheiten) 90% yerine 90vw de yazilabilir*/
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/* header format */
+
+/* header image sizing*/
+
+h1 {
+    text-align: center;
+}
+h1 img{
+    width: 90%;
+}
+
+/*navigation format*/
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/*link styling*/
+
+li a, .modal a{
+    color: var(--font-color);
+    background-color: var(--btn-color);
+    display: inline-block; /* inline elemente sizing*/
+    width: 100%;
+    text-align: center;
+    margin: 0.5em 0;
+    padding: 1em 0;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: clamp(1rem, 4vw, 1.3rem);
+}
+
+/* banner format */
+
+.banner {
+    background-color: var(--modal-bg-color);
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 10px;
+    padding: 1rem 0;
+}
+
+.banner h2{
+    font-size: clamp(3rem, 4vw, 4rem);
+/*margin-bottom: 1em;  coders.bay ile Orientierung arasindaki boslukla oynar - (minus) degerde verilebilir.*/
+
+}
+.banner p{
+font-size: clamp(1.5rem, 3vw, 2.5rem);
+line-height: 2em;
+margin-bottom: 2rem;
+font-weight: bold;
+}
+.banner img{
+    max-width: 40%;
+    margin-bottom: 2rem;
+}
+
+/*down arrow format*/
+.arrow{
+    text-align: center;
+    font-size: clamp(8rem, 20vw, 12rem);
+    margin: 1em 0;
+}
+
+/*modal format*/
+
+h2{
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin: 1em 0;
+}
+
+.modal{
+    background-color: var(--modal-bg-color);
+    padding: 2em 4em;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.modal h3{
+    font-size: clamp(1.5rem, 3vw, 4rem);
+}
+
+.modal p{
+    text-align: justify;
+    line-height: 2em;
+    margin-top: 4em;
+    font-size: clamp(1em, 3vw, 1.2rem);
+    font-weight: bold;
+
+}
+
+.modal a{
+    width: 60%;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin-top: 2em;
+}
+
+/* coontact form format */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--modal-bg-color);
+    border-radius: 10px;
+    margin: 5rem 0;
+}
+form h3{
+    font-size: clamp(1.5rem, 3vw, 4rem);
+}
+
+input[type="text"], input[type="email"]{
+    background-color: var(--modal-bg-color);
+    border: 3px solid var(--btn-color);
+    border-radius: 10px;
+    margin-bottom: 1em;
+    color: var(--font-color);
+    font-size: 2em;
+    width: 60vw;
+}
+input[type="submit"]{
+    background-color: var(--btn-color);
+    border: none;
+    color: var(--font-color);
+    width: 50%;
+    margin: 2em auto;
+    padding: 1em;
+    border-radius: 10px;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    font-weight: bold;
+
+}
+
+label{
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/*breakpoint for 1400px desktop view*/
+
+@media screen and (min-width: 1400px){
+    /*header & nav format*/
+
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    h1 img{
+        width: 200%;
+        margin-left: 1em;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    ul li{
+        margin: 0 2rem;
+    }
+    li a{
+        padding: 1rem 2rem;
+        width: 200px;
+    }
+
+    /*banner format*/
+    .banner{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .banner img{
+        width: 20%;
+    }
+
+    .flex-cantainer{
+        display: flex;
+        flex-direction: row;
+        gap: 10rem;
+    }
+
+    .flex-modal{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .flex-footer{
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    input[type="submit"]{
+        width: 30%;
+    }
+}
+
+]
