@@ -258,7 +258,7 @@ label {
         width: 20%;
     }
 
-    .flex-cantainer {
+    .flex-container {
         display: flex;
         flex-direction: row;
         gap: 10rem;
